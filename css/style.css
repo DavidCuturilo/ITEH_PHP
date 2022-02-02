@@ -1,0 +1,99 @@
+
+* {
+    font-family: Montserrat;
+}
+
+body{
+    background-image: url("../img/library.png");
+     background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+form {
+    display: block;
+    margin-top: 34%;
+    height: 400px;
+    width: 760px;
+}
+
+
+input[type=text], input[type=password] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+
+button:hover {
+    opacity: 0.8;
+    border: orange;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 12px;
+    padding-top: 24px;
+  
+}
+
+img.avatar {
+    width: 15em;
+    height: 20em;
+    border-radius: 5%;
+}
+
+.container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 10%;
+}
+
+.main-div {
+    border-radius: 2px;
+    margin: 10px auto 30px;
+    max-width: 38%;
+    padding: 50px 70px 70px 71px
+}
+
+.login-form {
+    margin-left: 11.5rem;
+}
+
+.login-form .btn.btn-primary {
+    margin-top: 10px;
+    margin-right: -32px;
+    font-size: 1rem;
+    width: 15%;
+    height: 44px;
+    line-height: 42px;
+    align-self: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 0;
+}
+
+.login-form .btn.btn-primary:hover {
+    background: rgb(255, 237, 96) none repeat scroll 0 0;
+    border-color: black;
+    margin-right: -30px;
+}
+
+.username{
+    font-size: 1.4rem;
+} 
+
+.password{  
+    margin-right: -28px;
+}
+
+.password-label{
+    font-size: 1.4rem;
+}
