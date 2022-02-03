@@ -61,7 +61,7 @@ body{
     margin-bottom: 8%;
     margin-top: -5%;
     text-align: center;
-    color: #0062cc;
+    color: white !important;
 } 
 
 .prijava-form {
