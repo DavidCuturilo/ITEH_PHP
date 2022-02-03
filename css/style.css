@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url("../img/library.png");
+    background-image: url("../img/login.jpg");
      background-size: 100% 100%; 
     background-repeat: no-repeat;
     background-attachment: fixed; 
@@ -12,7 +12,7 @@ body{
 
 form {
     display: block;
-    margin-top: 34%;
+    margin-top: 40%;
     height: 400px;
     width: 760px;
 }
@@ -53,7 +53,7 @@ img.avatar {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    margin-left: 10%;
+    margin-left: 12.5%;
 }
 
 .main-div {
