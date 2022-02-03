@@ -39,7 +39,7 @@ else {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <title>Narodna biblioteka</title>
-    <link rel="icon" type="image/jpg" href="img/ico.jpg"/>
+    <link rel="icon" type="image/jpg" href="img/favicon.jpg"/>
 
 </head>
 

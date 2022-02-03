@@ -32,7 +32,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Narodna biblioteka Srbija: Prijava</title>
-    <link rel="icon" type="image/jpg" href="img/ico.jpg"/>
+    <link rel="icon" type="image/jpg" href="img/favicon.jpg"/>
 
 </head>
 <body>
