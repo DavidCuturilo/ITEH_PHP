@@ -92,3 +92,41 @@ $('#izmeniForm').submit(function(){
     })
 
 })
+
+function unhideSearch(){
+    element = document.querySelector("#myInput");
+    element.classList.add("showSearch");
+}
+
+function hideSearch(){
+    element = document.querySelector("#myInput");
+    element.remove("showSearch");
+}
+
+var timer;
+$("#myInput").on("keyup", function(){
+    var searchid = $(this).val().trim();
+
+    clearInterval(timer);
+    timer = setTimeout(function() {
+        // console.log('User finished typing !!');
+        req = $.ajax({
+            url: 'handler/search.php',
+            type: 'post',
+            data: {'searchName':searchid}
+        })
+    
+        req.done(function(res,textStatus, jqXHR){
+            if(res=="Success"){
+                console.log("Uspesna pretraga "+res)
+                location.reload(true);
+            }else alert("Neuspesna pretraga! "+res);
+        })
+    
+        req.fail(function(jqXHR,textStatus,errorThrown){
+            console.log("Error happened: "+textStatus,errorThrown);
+        })
+    }, 1000);
+
+
+});

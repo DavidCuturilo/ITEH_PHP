@@ -162,3 +162,11 @@ div.modal-content, div.container.sir-form {
 .btn {
     outline: none !important;
 }
+
+.showSearch {
+    visibility: visible !important;
+}
+
+.search {
+    visibility: hidden;
+}

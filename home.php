@@ -9,10 +9,18 @@ if(!isset($_SESSION['user_id'])){
     exit();
 }
 
+/* Sortirani podaci */
 if(isset($_SESSION['sort'])) {
     $podaci = Izdavanje::sort($conn);
 }else $podaci = Izdavanje::getAll($conn);
 unset($_SESSION['sort']);
+
+/* Rez po pretrazi */
+if(isset($_SESSION['search'])){
+    $podaci = Izdavanje::getByWriterName($_SESSION['search'],$conn);
+}
+unset($_SESSION['search']); 
+
 if(!$podaci){
     echo "Nastala je greska prilikom preuzimanja podataka iz tabele iznajmljivanje";
     die();
@@ -56,8 +64,8 @@ else {
 
     </div>
     <div class="col-md-4">
-        <button id="btn-pretraga" class="btn btn-warning btn-block btn-header"> Pretrazi izdavanja knjiga</button>
-        <input type="text" id="myInput" onkeyup="funkcijaZaPretragu()" placeholder="Pretrazi kolokvijume po predmetu" hidden>
+        <button id="btn-pretraga" onclick="unhideSearch()" ondblclick="hideSearch()" class="btn btn-warning btn-block btn-header"> Pretrazi iznajmljivanje knjiga</button>
+        <input type="text" class="search" name="searchName" id="myInput" placeholder="Pretrazi iznajmljivanja po piscu">
     </div>
 </div>
 

@@ -54,6 +54,11 @@ class Izdavanje{
         return $conn->query($query);
     }
 
+    public static function getByWriterName($pisac,mysqli $conn){
+        $query = "SELECT * FROM izdavanje WHERE pisac='$pisac'";
+        return $conn->query($query);
+    }
+
 }
 
 ?>
