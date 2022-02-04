@@ -39,8 +39,8 @@ class Izdavanje{
         return $conn->query($query);
     }
 
-    public function update(mysqli $conn){
-        $query = "UPDATE izdavanje SET naziv_knjige = $this->naziv_knjige, pisac = $this->pisac, datum_izdavanja=$this->datum_izdavanja WHERE id=$this->id";
+    public static function update(Izdavanje $izdavanje,mysqli $conn){
+        $query = "UPDATE izdavanje SET naziv_knjige = '$izdavanje->naziv_knjige', pisac = '$izdavanje->pisac', datum_izdavanja='$izdavanje->datum_izdavanja', user_id=$izdavanje->user_id WHERE id=$izdavanje->id";
         return $conn->query($query);
     }
 

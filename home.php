@@ -85,7 +85,7 @@ else {
                     <td><?php echo $red["datum_izdavanja"] ?></td>
                     <td>
                         <label class="custom-radio-btn">
-                            <input type="radio" name="checked-donut" value=<?php echo $red["id"] ?>>
+                            <input type="radio" name="checked" value=<?php echo $red["id"] ?>>
                             <span class="checkmark"></span>
                         </label>
                     </td>
@@ -175,7 +175,7 @@ else {
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input id="id" type="text" name="id" class="form-control"
+                                    <input id="id" type="text" class="form-control"
                                            placeholder="Id *" value="" readonly />
                                 </div>
                                 <div class="form-group">
