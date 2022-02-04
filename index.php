@@ -11,10 +11,11 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     $korisnik = new User(1,$username,$password);
 
     $res = User::logInUser($korisnik,$conn);
+    $red = $res->fetch_array();
 
     if($res->num_rows==1){
         print `<script> console.log("Uspesna prijava!"); </script>`;
-        $_SESSION['user_id'] = $korisnik->id;
+        $_SESSION['user_id'] = $red[0];
         header('Location: home.php');
         exit();
     } else {

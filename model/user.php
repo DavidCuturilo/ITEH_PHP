@@ -14,7 +14,7 @@ class User{
     }
 
     public static function logInUser($user, mysqli $conn){
-        $query = "SELECT * FROM user WHERE username='$user->username' and password='$user->password'";
+        $query = "SELECT id FROM user WHERE username='$user->username' and password='$user->password'";
         print "$query";
         return $conn->query($query);
     }
