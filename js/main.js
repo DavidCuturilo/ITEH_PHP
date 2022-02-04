@@ -51,11 +51,16 @@ $('#btn-obrisi').click(function(){
 
 $('#btn-sortiraj').click(function(){
     req = $.ajax({
-        url: 'handler/get.php',
-        type: 'get'
+        url: 'handler/sort.php',
+        type: 'post',
     })
-    
-    location.reload(true);
+
+    req.done(function(res,textStatus, jqXHR){
+        if(res=="Success"){
+            console.log("Uspesan sort")
+            location.reload(true);
+        }else console.log("Sort neuspesan "+res);
+    })
 })
 
 $('#izmeniForm').submit(function(){

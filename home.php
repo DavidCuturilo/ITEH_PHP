@@ -9,16 +9,14 @@ if(!isset($_SESSION['user_id'])){
     exit();
 }
 
-if(isset($_GET['sort'])) {
-    echo "SORTIRANJE";
+if(isset($_SESSION['sort'])) {
     $podaci = Izdavanje::sort($conn);
 }else $podaci = Izdavanje::getAll($conn);
-
+unset($_SESSION['sort']);
 if(!$podaci){
     echo "Nastala je greska prilikom preuzimanja podataka iz tabele iznajmljivanje";
     die();
 }
-
 if($podaci->num_rows==0){
     echo "Ne postoji nijedno aktivno iznajmljivanje.";
     die();
@@ -105,7 +103,7 @@ else {
                     <button id="btn-izmeni" class="btn btn-warning" data-toggle="modal" data-target="#izmeniModal">Izmeni</button>
                 </div>
                 <div class="col-md-2" style="text-align: left;">
-                    <button id="btn-sortiraj" name="sort" class="btn btn-normal">Sortiraj</button>
+                    <button id="btn-sortiraj" name="sort" method="post" class="btn btn-normal">Sortiraj</button>
                 </div>
                     <button id="btn-obrisi" class="btn btn-danger" style="background-color: red; border: 1px solid white;">Obrisi</button>
             </div>
