@@ -11,7 +11,7 @@ if(!isset($_SESSION['user_id'])){
 
 /* Sortirani podaci */
 if(isset($_SESSION['sort'])) {
-    $podaci = Izdavanje::sort($conn);
+    $podaci = Izdavanje::sort($conn,$_SESSION['user_id']);
 }else $podaci = Izdavanje::getAll($conn,$_SESSION['user_id']);
 unset($_SESSION['sort']);
 

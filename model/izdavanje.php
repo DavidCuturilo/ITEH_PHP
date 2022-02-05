@@ -49,8 +49,8 @@ class Izdavanje{
         return $conn->query($query);
     }
 
-    public static function sort(mysqli $conn){
-        $query = "SELECT * FROM izdavanje ORDER BY datum_izdavanja DESC";
+    public static function sort(mysqli $conn, $user_id){
+        $query = "SELECT * FROM izdavanje WHERE user_id =$user_id ORDER BY datum_izdavanja DESC";
         return $conn->query($query);
     }
 
