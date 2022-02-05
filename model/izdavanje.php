@@ -17,8 +17,8 @@ class Izdavanje{
     }
 
 
-    public static function getAll(mysqli $conn){
-        $query = "SELECT * FROM izdavanje";
+    public static function getAll(mysqli $conn, $user_id){
+        $query = "SELECT * FROM izdavanje WHERE user_id=$user_id";
         return $conn->query($query);
     }
 
