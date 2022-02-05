@@ -126,7 +126,7 @@ $("#myInput").on("keyup", function(){
         req.fail(function(jqXHR,textStatus,errorThrown){
             console.log("Error happened: "+textStatus,errorThrown);
         })
-    }, 1000);
+    }, 200);
 
 
 });
